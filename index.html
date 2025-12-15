@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bmi__calculator">
+        <div class="left__calculator">
+            <div class="top">
+                <h3>BMI CALCULATOR</h3>
+            </div>
+            <div class="calculator__main">
+                <div class="selecting__btns">
+                    <button class="primary active">Standard</button>
+                    <button class=" secondry">Metric</button>
+                </div>
+
+                <div class="height__weight">
+                    <div class="top_part">
+                        <h3 class="height">Height</h3>
+                        <h3 class="weight">Weight</h3>
+                    </div>
+                    <div class="standard_screen">
+                        <div style="display: flex; gap: 10px;">
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <select name="" id="feet">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                </select>
+                                <span>Feet</span>
+                            </div>
+
+                            <div style="display: flex; align-items: center; gap: 5px;">
+                                <select name="" id="inches">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="7">8</option>
+                                    <option value="7">9</option>
+                                    <option value="7">10</option>
+                                    <option value="11">11</option>
+                                </select>
+                                <span>Inches</span>
+                            </div>
+
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 5px;">
+                            <input type="number" name="number" id="pound">
+                            <span>Pounds</span>
+                        </div>
+
+
+                    </div>
+                    <div class="matric_screen"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right__categories">
+            <div class="top">
+                <h3>BMI CATEGORIES</h3>
+            </div>
+            <div class="categories__main">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

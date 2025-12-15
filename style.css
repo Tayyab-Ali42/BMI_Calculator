@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    /* height: 500px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 50px;
+    overflow-x: hidden;
+}
+
+.bmi__calculator {
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.top {
+    padding: 1.9rem 3rem;
+    background-color: #00D4FF;
+    color: black;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.calculator__main {
+    /* border: 1px solid gray; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 20px 0px;
+    min-height: 350px;
+    padding: 1.8rem;
+
+}
+
+.categories__main {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 20px 0px;
+    min-height: 350px;
+}
+
+.selecting__btns {
+    margin-bottom: 2rem;
+    display: inline-flex;
+    border: 1px solid #000;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.selecting__btns button {
+    padding: 10px 30px;
+    border: 1px solid #005f71;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+}
+
+.selecting__btns button:hover {
+    background-color: #005F71;
+    color: white;
+}
+
+.selecting__btns .active {
+    background-color: #005F71;
+    color: white;
+}
+
+.top_part {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 1rem;
+}
+
+.standard_screen {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+}
+
+#feet,
+#inches {
+    width: 60px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: px; */
+}
+
+#pound {
+    width: 80px;
+    padding: 10px;
+}
