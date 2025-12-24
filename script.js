@@ -47,12 +47,12 @@ let calculateBmi = () => {
         showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
         resultELm.textContent = `Underweight`
     }
-    if (bmi > 18.50 && bmi < 24.90) {
+    if (bmi >= 18.50 && bmi <= 24.90) {
         showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
         resultELm.textContent = 'Healthy'
 
     }
-    if (bmi >= 25 && bmi < 29.90) {
+    if (bmi >= 25 && bmi <= 29.90) {
         showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
         resultELm.textContent = 'Over Weight'
     }
