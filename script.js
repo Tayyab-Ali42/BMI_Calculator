@@ -2,7 +2,7 @@ const heightElm = document.getElementById('height')
 const weightElm = document.getElementById('weight')
 const calculateBtn = document.querySelector('.calculate-btn')
 const resultELm = document.querySelector('.result')
-
+const showBmiValue = document.querySelector('.bmi-value')
 
 
 let resultEnd
@@ -43,11 +43,23 @@ let calculateBmi = () => {
 
     // Show result 
 
-    if (bmi < 18.50) resultELm.textContent = `Underweight`
-    if (bmi > 18.50 && bmi < 24.90) resultELm.textContent = 'Healthy'
-    if (bmi >= 25 && bmi < 29.90) resultELm.textContent = 'Over Weight'
-    if (bmi >= 30) resultELm.textContent = 'Obesity'
+    if (bmi < 18.50) {
+        showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
+        resultELm.textContent = `Underweight`
+    }
+    if (bmi > 18.50 && bmi < 24.90) {
+        showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
+        resultELm.textContent = 'Healthy'
 
+    }
+    if (bmi >= 25 && bmi < 29.90) {
+        showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
+        resultELm.textContent = 'Over Weight'
+    }
+    if (bmi >= 30) {
+        showBmiValue.textContent = `BMI ${bmi.toFixed(2)}`
+        resultELm.textContent = '}Obesity'
+    }
     // Clear Previous Timeout
 
     clearTimeout(resultEnd);
@@ -56,7 +68,8 @@ let calculateBmi = () => {
 
     resultEnd = setTimeout(() => {
         resultELm.textContent = 'Result will appear here'
-    }, 5000);
+        showBmiValue.textContent = 'BMI'
+    }, 4000);
 
 
     // Clear Values
