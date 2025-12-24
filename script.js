@@ -6,10 +6,13 @@ const resultELm = document.querySelector('.result')
 
 
 let resultEnd
+
 let calculateBmi = () => {
+    // Get Values
     let weightValue = weightElm.value
     let heightValue = heightElm.value
 
+    // Check conditions
     if (!weightValue || !heightValue) {
         alert('Please enter valid value')
         return
@@ -32,16 +35,31 @@ let calculateBmi = () => {
     // CONVERT HEIGHT CM TO METER
 
     let heightmet = heightValue / 100
+
+
+    // Calculate BMI
+
     let bmi = weightValue / (heightmet * heightmet)
+
+    // Show result 
+
     if (bmi < 18.50) resultELm.textContent = `Underweight`
     if (bmi > 18.50 && bmi < 24.90) resultELm.textContent = 'Healthy'
     if (bmi >= 25 && bmi < 29.90) resultELm.textContent = 'Over Weight'
     if (bmi >= 30) resultELm.textContent = 'Obesity'
+
+    // Clear Previous Timeout
+
     clearTimeout(resultEnd);
+
+    // Set timeout
+
     resultEnd = setTimeout(() => {
         resultELm.textContent = 'Result will appear here'
     }, 5000);
 
+
+    // Clear Values
 
     heightElm.value = ''
     weightElm.value = ''
